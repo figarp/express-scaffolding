@@ -1,0 +1,42 @@
+{
+  "name": "pugs-service",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prestart": "npm run build",
+    "start": "node .",
+    "predev": "npm run format",
+    "dev": "set NODE_ENV=dev&& nodemon --config nodemon.json",
+    "format": "prettier . --write",
+    "pre-commit": "npx lint-staged",
+    "lint": "npx eslint --fix"
+  },
+  "author": "Mexter",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "sequelize": "^6.37.4",
+    "winston": "^3.15.0"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.1"
+  },
+  "lint-staged": {
+    "src/**.ts": "eslint --quite --fix",
+    "**.{ts,json,js,yml,tsx,jsx}": "prettier . --write"
+  }
+}

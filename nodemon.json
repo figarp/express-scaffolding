@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "ignore": "*.test.ts",
+  "exec": "npx tsx ./src/app.ts",
+  "ext": "ts,json",
+  "watch": ["src/**/*.ts"]
+}

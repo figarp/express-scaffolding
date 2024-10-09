@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "ES2023",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "paths": {
+      "*": ["./node_modules/*", "./tests/", "./types"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*", "./types/declare.d.ts"],
+  "exclude": ["dist/**/*", "tests/**/*"],
+  "ts-node": {
+    "files": true
+  }
+}

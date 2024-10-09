@@ -1,0 +1,14 @@
+node_modules/
+lib/
+coverage/
+dist/
+logs/
+
+.vscode/
+.idea/
+
+package.json
+package-lock.json
+pnpm-lock.yaml
+
+.gitlab-cli.yml
